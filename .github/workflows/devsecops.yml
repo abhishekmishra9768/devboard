@@ -8,4 +8,4 @@ on:
 jobs:
     # Code open shift  left
     code-quality:
-        uses: ./github/workflows/code-quality.yml
+        uses: ./.github/workflows/code-quality.yml
