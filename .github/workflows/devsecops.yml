@@ -1,0 +1,11 @@
+name: DevsecOps
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    # Code open shift  left
+    code-quality:
+        uses: ./github/workflows/code-quality.yml
