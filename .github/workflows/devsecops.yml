@@ -9,3 +9,6 @@ jobs:
     # Code open shift  left
     code-quality:
         uses: ./.github/workflows/code-quality.yml
+
+    secret-scan:
+        uses: ./.github/workflows/code-quality.yml
