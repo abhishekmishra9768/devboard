@@ -26,7 +26,7 @@ jobs:
               working-directory: backend
               run: |
                   mkdir -p ../reports
-                  govulncheck ./... > ../reports/vunlerbility.txt || true
+                  govulncheck ./... > ../reports/vunlerbility.txt
 
             - name: Setup Node.js
               uses: actions/setup-node@v6
