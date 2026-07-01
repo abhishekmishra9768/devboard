@@ -22,7 +22,8 @@ jobs:
               run: go install golang.org/x/vuln/cmd/govulncheck@latest
 
             - name: "GoVulncheck"
-              run: govulncheck ./backend/..
+              working-directory: backend
+              run: govulncheck ./...
 
             - name: Setup Node.js
               uses: actions/setup-node@v6
