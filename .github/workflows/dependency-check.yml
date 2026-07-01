@@ -24,7 +24,7 @@ jobs:
             - name: "GoVulncheck"
               continue-on-error: true
               working-directory: backend
-              run: govulncheck ./... > reports/vunlerbility.txt
+              run: govulncheck ./... > vunlerbility.txt
 
             - name: Setup Node.js
               uses: actions/setup-node@v6
