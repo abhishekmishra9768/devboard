@@ -11,4 +11,7 @@ jobs:
         uses: ./.github/workflows/code-quality.yml
 
     secret-scan:
-        uses: ./.github/workflows/code-quality.yml
+        uses: ./.github/workflows/secret-scanning.yml
+
+    dependecy-check:
+        uses: ./.github/workflows/dependency-check.yml
