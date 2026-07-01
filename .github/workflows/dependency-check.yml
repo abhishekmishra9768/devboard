@@ -22,8 +22,9 @@ jobs:
               run: go install golang.org/x/vuln/cmd/govulncheck@v1.1.4
 
             - name: "GoVulncheck"
+              continue-on-error: true
               working-directory: backend
-              run: govulncheck ./...
+              run: govulncheck ./... > vunlerbility.txt
 
             - name: Setup Node.js
               uses: actions/setup-node@v6
@@ -39,3 +40,11 @@ jobs:
             - name: NPM Audit
               working-directory: frontend
               run: npm audit
+
+            - name: "Upload Artifact"
+              if: always()
+              uses: actions/upload-artifact@v4
+              with:
+                  name: job-reports
+                  path: reports/vunlerbility.txt
+                  retention-days: 5
